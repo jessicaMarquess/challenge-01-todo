@@ -1,0 +1,33 @@
+.container {
+  width: 736px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-400);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.container label {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input:checked + label.text{
+  text-decoration: line-through;
+}
+
+.checkbox {
+  padding-right: 0.75rem;
+  align-self: start;
+  cursor: pointer;
+}
