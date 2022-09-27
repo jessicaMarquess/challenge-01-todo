@@ -31,3 +31,9 @@ input:checked + label.text{
   align-self: start;
   cursor: pointer;
 }
+
+.container button {
+  background: transparent;
+  border: none;
+  color: var(--gray-300)
+}

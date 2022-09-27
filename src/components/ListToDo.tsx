@@ -1,17 +1,22 @@
 import styles from './ListToDo.module.css';
 
-import clipboard from '../assets/clipboard.png';
 import { useState } from 'react';
 import { Checkbox } from './Checkbox';
+import { NewToDo } from './NewToDo';
 
-const ListToDo = () => {
+
+
+const ListToDo = () => { 
   const [checked, setChecked] = useState(false);
 
+  
   const handleChange = () => {
     setChecked(!checked);
   };
+  
   return (
    <>
+    <NewToDo />
      <header >
      <div className={styles.container}>
      <div>
@@ -28,25 +33,10 @@ const ListToDo = () => {
     <div>
       <Checkbox
         label="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."
-        value={checked}
-        onChange={handleChange}
-      />
-      <Checkbox
-        label="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."
-        value={checked}
+        isChecked={checked}
         onChange={handleChange}
       />
     </div>
-    {/*
-    <div className={styles.listToDo}>
-      <div className={styles.content}>
-        <img src={clipboard} />
-        <strong>Você ainda não tem tarefas cadastradas</strong>
-        <p>Crie tarefas e organize seus itens a fazer</p>
-      </div>
-    </div>
-    */}
-
    </>
   )
 };
