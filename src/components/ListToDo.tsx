@@ -16,6 +16,7 @@ const ListToDo = () => {
   
   return (
    <>
+    <NewToDo />
      <header >
      <div className={styles.container}>
      <div>
@@ -28,7 +29,6 @@ const ListToDo = () => {
       </div>
      </div>
     </header>
-
     <div>
       <Checkbox
         label="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."
