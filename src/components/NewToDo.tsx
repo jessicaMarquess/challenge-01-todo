@@ -22,6 +22,7 @@ const NewToDo = () => {
           className={styles.inputAdd}
           placeholder='Adicione uma nova tarefa'
           type='text'
+          onChange={(e) => setNewToDo(e.target.value)}
           value={newToDo}
           required  
         />

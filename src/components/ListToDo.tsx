@@ -16,7 +16,6 @@ const ListToDo = () => {
   
   return (
    <>
-    <NewToDo />
      <header >
      <div className={styles.container}>
      <div>
