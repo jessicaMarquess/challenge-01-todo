@@ -1,14 +1,13 @@
 import styles from './Checkbox.module.css';
 import {  CheckCircle, Circle, Trash } from "phosphor-react";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface ICheckboxProps {
   label: string;
   onDeleteToDo: (label: string) => void;
-  checked: boolean;
 }
 
-const Checkbox = ({ label,  onDeleteToDo, checked }: ICheckboxProps ) => {
+const Checkbox = ({ label,  onDeleteToDo }: ICheckboxProps ) => {
   const [isChecked, setIsChecked] = useState(false);
   
   const handleChecked = () => {
