@@ -76,7 +76,7 @@ const ListToDo = () => {
           </div>
           <div>
             <p>
-              Concluídas <span className={styles.infoCount}>{`${countCompleted.length} de ${toDo.length}`}</span>
+              Concluídas <span className={styles.infoCount}>{toDo.length === 0 ? 0 : `${countCompleted.length} de ${toDo.length}`}</span>
             </p>
           </div>
         </div>
