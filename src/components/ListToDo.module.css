@@ -72,4 +72,77 @@
   margin-right: 0.5rem;
 }
 
+.content {
+  width: 36rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;  
+  margin-bottom: 1.5rem;
+}
+
+.content div p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--blue-light);
+}
+
+.content div:last-child p {
+  color: var(--purple-light);
+}
+
+.infoCount {
+  margin-left: 0.5rem;
+  background-color: var(--gray-400);
+  border-radius: 62.438rem;
+  padding: 0.125rem 0.5rem;
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.containerChecked {
+  width: 45.938rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-400);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.isLine {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+label {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox {
+  padding-right: 0.75rem;
+  align-self: start;
+  cursor: pointer;
+}
+
+.containerChecked button {
+  background: transparent;
+  border: none;
+  color: var(--gray-300)
+}
 
