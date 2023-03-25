@@ -1,11 +1,13 @@
 <h1 align="center">ToDo</h1>
 
 ## 📖 Descrição
-### Este projeto tem como finalidade realizar uma aplicação de controle de to-do list, onde contém as seguintes finalidades: 
+### Este projeto tem como finalidade realizar o primeiro desafio feito pelo Ignite - React, onde deve ser criado uma aplicação de controle de to-do list, onde contém as seguintes finalidades: 
  - Adicionar uma nova tarefa;
  - Marcar e desmarcar uma tarefa como concluída;
  - Remover uma tarefa da listagem;
  - Mostrar o progresso de conclusão das tarefas.
+
+ [Link para Figma](https://www.figma.com/file/vWH06O5Iu6aApWTEP7b8Rz/ToDo-List-(Copy)?t=gr6UK7dsM1wuabyZ-0)
  
 ---
 
