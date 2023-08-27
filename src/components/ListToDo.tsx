@@ -1,7 +1,7 @@
 import styles from './ListToDo.module.css';
 
 import { CheckCircle, Circle, PlusCircle, Trash } from 'phosphor-react';
-import { FormEvent, Fragment, useState } from 'react';
+import { FormEvent, Fragment, useEffect, useState } from 'react';
 import { NotToDoList } from './NotToDoList';
 
 interface ToDoProps {
@@ -11,7 +11,10 @@ interface ToDoProps {
 }
 
 const ListToDo = () => {
-  const [toDo, setToDo] = useState<ToDoProps[]>([]);
+  const [toDo, setToDo] = useState<ToDoProps[]>(() => {
+    const cachedToDo = localStorage.getItem('cachedToDo');
+    return cachedToDo ? JSON.parse(cachedToDo) : [];
+  });
   const [newToDo, setNewToDo] = useState('');
 
   const handleNewToDo = (e: FormEvent<HTMLFormElement>) => {
@@ -36,7 +39,7 @@ const ListToDo = () => {
   };
 
   const handleChecked = (id: number) => {
-    const updateTask = toDo.map( task => task.id === id ? {
+    const updateTask = toDo.map(task => task.id === id ? {
       ...task,
       isChecked: !task.isChecked,
     } : task);
@@ -44,6 +47,10 @@ const ListToDo = () => {
   };
 
   const countCompleted = toDo.filter(task => task.isChecked === true);
+
+  useEffect(() => {
+    localStorage.setItem('cachedToDo', JSON.stringify(toDo));
+  }, [toDo]);
 
   return (
     <>
